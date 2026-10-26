@@ -1,0 +1,11 @@
+app: ScaleJournal 1.1.1
+device: HONOR ANY-LX1, Android 13 (SDK 33)
+sent: 2026-10-26 17:09:38
+
+10-26 17:09:30.384 APP: === запуск ===
+10-26 17:09:30.391 APP: запуск: HONOR ANY-LX1, Android 13 (SDK 33)
+10-26 17:09:30.480 APP: автостарт поиска весов
+10-26 17:09:30.487 PERM: запрос разрешений: [android.permission.BLUETOOTH_CONNECT, android.permission.BLUETOOTH_SCAN]
+10-26 17:09:30.570 APP: onStart
+10-26 17:09:32.649 PERM: результат запроса разрешений: {android.permission.BLUETOOTH_CONNECT=true, android.permission.BLUETOOTH_SCAN=true}
+10-26 17:09:32.677 BLE: === старт сессии поиска ===
