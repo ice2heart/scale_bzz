@@ -61,6 +61,7 @@ class ScaleClient(
     private val pendingOps = ArrayDeque<() -> Boolean>()
     private var opInProgress = false
     private var watchdog: Runnable? = null
+    private var sessionTimeout: Runnable? = null
 
     fun start() {
         val manager = context.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
@@ -92,45 +93,54 @@ class ScaleClient(
             .build()
         val callback = object : ScanCallback() {
             override fun onScanResult(callbackType: Int, result: ScanResult) {
-                val record = result.scanRecord
-                val name = record?.deviceName ?: ""
-                if (!isCandidate(name, record)) return
-                AppLog.log(
-                    "SCAN",
-                    "${result.device?.address} name=\"$name\" rssi=${result.rssi} ${mfgString(record)}",
-                )
-                handleBroadcast(record)
-                if (measured || gatt != null) return
-                val device = result.device ?: return
-                listener.onStatus("Найдены весы ${device.address}, подключаюсь…")
-                AppLog.log("BLE", "подключение к ${device.address}")
-                try {
-                    scanner.stopScan(this)
-                } catch (_: Exception) {
+                handler.post {
+                    // Результат из очереди от прошлой сессии — игнорируем
+                    if (ended || scanCallback !== this) return@post
+                    val record = result.scanRecord
+                    val name = record?.deviceName ?: ""
+                    if (!isCandidate(name, record)) return@post
+                    AppLog.log(
+                        "SCAN",
+                        "${result.device?.address} name=\"$name\" rssi=${result.rssi} ${mfgString(record)}",
+                    )
+                    handleBroadcast(record)
+                    if (measured || gatt != null) return@post
+                    val device = result.device ?: return@post
+                    listener.onStatus("Найдены весы ${device.address}, подключаюсь…")
+                    AppLog.log("BLE", "подключение к ${device.address}")
+                    try {
+                        scanner.stopScan(this)
+                    } catch (_: Exception) {
+                    }
+                    scanCallback = null
+                    connectionAttempted = true
+                    gatt = device.connectGatt(context, false, gattCallback, BluetoothDevice.TRANSPORT_LE)
                 }
-                scanCallback = null
-                connectionAttempted = true
-                gatt = device.connectGatt(context, false, gattCallback, BluetoothDevice.TRANSPORT_LE)
             }
 
             override fun onScanFailed(errorCode: Int) {
-                AppLog.log("SCAN", "ошибка сканирования: код $errorCode")
-                listener.onStatus("Ошибка сканирования: $errorCode")
+                handler.post {
+                    AppLog.log("SCAN", "ошибка сканирования: код $errorCode")
+                    listener.onStatus("Ошибка сканирования: $errorCode")
+                }
             }
         }
         scanCallback = callback
         scanner.startScan(emptyList(), settings, callback)
-        handler.postDelayed({
+        sessionTimeout = Runnable {
             if (!measured && !ended) {
                 AppLog.log("BLE", "таймаут сессии: весы не найдены")
                 listener.onStatus("Весы не найдены — встаньте на весы и попробуйте снова")
                 stop()
             }
-        }, TIMEOUT_MS)
+        }.also { handler.postDelayed(it, TIMEOUT_MS) }
     }
 
     fun stop() {
-        handler.removeCallbacksAndMessages(null)
+        // Снимаем только свои таймеры: в очереди могут быть GATT-колбэки (STATE_DISCONNECTED → close())
+        sessionTimeout?.let { handler.removeCallbacks(it) }
+        sessionTimeout = null
+        cancelWatchdog()
         pendingOps.clear()
         opInProgress = false
         scanCallback?.let { callback ->
@@ -146,7 +156,9 @@ class ScaleClient(
         gatt?.let {
             AppLog.log("BLE", "отключение GATT")
             it.disconnect()
+            it.close()
         }
+        gatt = null
         if (!ended) {
             ended = true
             listener.onSessionEnded(this, connectionAttempted)
@@ -190,78 +202,13 @@ class ScaleClient(
 
     private val gattCallback = object : BluetoothGattCallback() {
         override fun onConnectionStateChange(g: BluetoothGatt, status: Int, newState: Int) {
-            AppLog.log("GATT", "connectionState=$newState status=$status")
-            when (newState) {
-                BluetoothProfile.STATE_CONNECTED -> {
-                    listener.onStatus("Подключено, обнаружение сервисов…")
-                    g.discoverServices()
-                }
-                BluetoothProfile.STATE_DISCONNECTED -> {
-                    g.close()
-                    if (gatt === g) gatt = null
-                    if (!measured && !ended) {
-                        AppLog.log("GATT", "устройство отключилось (status=$status), измерения не было")
-                        listener.onStatus("Отключено от весов")
-                    }
-                }
+            handler.post {
+                if (gatt === g) handleConnectionStateChange(g, status, newState) else g.close()
             }
         }
 
         override fun onServicesDiscovered(g: BluetoothGatt, status: Int) {
-            AppLog.log("GATT", "servicesDiscovered status=$status")
-            if (status != BluetoothGatt.GATT_SUCCESS) {
-                listener.onStatus("Ошибка обнаружения сервисов: $status")
-                g.disconnect()
-                return
-            }
-            for (service in g.services) {
-                val chars = service.characteristics.joinToString(" ") { c ->
-                    String.format("%s(%s)", c.uuid, charProps(c.properties))
-                }
-                AppLog.log("GATT", "svc ${service.uuid}: $chars")
-            }
-            val locked = g.getService(SVC_BODY)?.getCharacteristic(CHR_LOCKED)
-            if (locked == null) {
-                AppLog.log("GATT", "характеристика 2A9C не найдена — отключаюсь")
-                listener.onStatus("Характеристика измерений не найдена")
-                g.disconnect()
-                return
-            }
-
-            pendingOps.clear()
-            opInProgress = false
-
-            g.getService(SVC_TIME)?.getCharacteristic(CHR_TIME)?.let { timeChar ->
-                enqueue {
-                    val ok = performWrite(g, timeChar, buildTimeFrame())
-                    AppLog.log("GATT", "синхронизация времени 2A08: ok=$ok")
-                    ok
-                }
-            }
-            g.getService(SVC_UART)?.getCharacteristic(CHR_UART_TX)?.let { tx ->
-                enqueue {
-                    val ok = performWrite(g, tx, UNIT_SYNC_KG)
-                    AppLog.log("GATT", "синхронизация единиц (кг) FFF2: ok=$ok")
-                    ok
-                }
-            }
-            enqueue {
-                val ok = performEnable(g, locked, indication = true)
-                if (!ok) {
-                    AppLog.log("GATT", "критично: CCCD 2A9C не включён, разрываю соединение")
-                    pendingOps.clear()
-                    g.disconnect()
-                }
-                ok
-            }
-            g.getService(SVC_UART)?.getCharacteristic(CHR_UART_RX)?.let { rx ->
-                enqueue {
-                    val ok = performEnable(g, rx, indication = false)
-                    AppLog.log("GATT", "notify FFF1: ok=$ok")
-                    ok
-                }
-            }
-            runNext()
+            handler.post { if (gatt === g) handleServicesDiscovered(g, status) }
         }
 
         override fun onCharacteristicWrite(
@@ -269,23 +216,119 @@ class ScaleClient(
             characteristic: BluetoothGattCharacteristic,
             status: Int,
         ) {
-            AppLog.log("GATT", "write ${shortUuid(characteristic.uuid)} status=$status")
-            completeOp()
+            val uuid = characteristic.uuid
+            handler.post {
+                if (gatt !== g) return@post
+                AppLog.log("GATT", "write ${shortUuid(uuid)} status=$status")
+                completeOp()
+            }
         }
 
         override fun onDescriptorWrite(g: BluetoothGatt, descriptor: BluetoothGattDescriptor, status: Int) {
             val chr = descriptor.characteristic?.uuid
-            AppLog.log("GATT", "descriptorWrite ${chr?.let { shortUuid(it) }} status=$status")
-            if (status == BluetoothGatt.GATT_SUCCESS && chr == CHR_LOCKED) {
-                listener.onStatus("Встаньте на весы")
+            handler.post {
+                if (gatt !== g) return@post
+                AppLog.log("GATT", "descriptorWrite ${chr?.let { shortUuid(it) }} status=$status")
+                if (status == BluetoothGatt.GATT_SUCCESS && chr == CHR_LOCKED) {
+                    listener.onStatus("Встаньте на весы")
+                }
+                completeOp()
             }
-            completeOp()
         }
 
+        // API 33+: фреймеворк вызывает только эту версию (super не вызываем, чтобы не обработать дважды)
+        override fun onCharacteristicChanged(
+            g: BluetoothGatt,
+            characteristic: BluetoothGattCharacteristic,
+            value: ByteArray,
+        ) {
+            val uuid = characteristic.uuid
+            val data = value.copyOf()
+            handler.post { if (gatt === g) handleFrame(uuid, data) }
+        }
+
+        // API < 33: фреймеворк вызывает только эту версию
         @Deprecated("Deprecated in Java")
         override fun onCharacteristicChanged(g: BluetoothGatt, characteristic: BluetoothGattCharacteristic) {
-            handleFrame(characteristic.uuid, characteristic.value ?: return)
+            val uuid = characteristic.uuid
+            val data = characteristic.value?.copyOf() ?: return
+            handler.post { if (gatt === g) handleFrame(uuid, data) }
         }
+    }
+
+    private fun handleConnectionStateChange(g: BluetoothGatt, status: Int, newState: Int) {
+        AppLog.log("GATT", "connectionState=$newState status=$status")
+        when (newState) {
+            BluetoothProfile.STATE_CONNECTED -> {
+                listener.onStatus("Подключено, обнаружение сервисов…")
+                g.discoverServices()
+            }
+            BluetoothProfile.STATE_DISCONNECTED -> {
+                g.close()
+                if (gatt === g) gatt = null
+                if (!measured && !ended) {
+                    AppLog.log("GATT", "устройство отключилось (status=$status), измерения не было")
+                    listener.onStatus("Отключено от весов")
+                }
+            }
+        }
+    }
+
+    private fun handleServicesDiscovered(g: BluetoothGatt, status: Int) {
+        AppLog.log("GATT", "servicesDiscovered status=$status")
+        if (status != BluetoothGatt.GATT_SUCCESS) {
+            listener.onStatus("Ошибка обнаружения сервисов: $status")
+            g.disconnect()
+            return
+        }
+        for (service in g.services) {
+            val chars = service.characteristics.joinToString(" ") { c ->
+                String.format("%s(%s)", c.uuid, charProps(c.properties))
+            }
+            AppLog.log("GATT", "svc ${service.uuid}: $chars")
+        }
+        val locked = g.getService(SVC_BODY)?.getCharacteristic(CHR_LOCKED)
+        if (locked == null) {
+            AppLog.log("GATT", "характеристика 2A9C не найдена — отключаюсь")
+            listener.onStatus("Характеристика измерений не найдена")
+            g.disconnect()
+            return
+        }
+
+        pendingOps.clear()
+        opInProgress = false
+
+        g.getService(SVC_TIME)?.getCharacteristic(CHR_TIME)?.let { timeChar ->
+            enqueue {
+                val ok = performWrite(g, timeChar, buildTimeFrame())
+                AppLog.log("GATT", "синхронизация времени 2A08: ok=$ok")
+                ok
+            }
+        }
+        g.getService(SVC_UART)?.getCharacteristic(CHR_UART_TX)?.let { tx ->
+            enqueue {
+                val ok = performWrite(g, tx, UNIT_SYNC_KG)
+                AppLog.log("GATT", "синхронизация единиц (кг) FFF2: ok=$ok")
+                ok
+            }
+        }
+        enqueue {
+            val ok = performEnable(g, locked, indication = true)
+            if (!ok) {
+                AppLog.log("GATT", "критично: CCCD 2A9C не включён, разрываю соединение")
+                pendingOps.clear()
+                g.disconnect()
+            }
+            ok
+        }
+        g.getService(SVC_UART)?.getCharacteristic(CHR_UART_RX)?.let { rx ->
+            enqueue {
+                val ok = performEnable(g, rx, indication = false)
+                AppLog.log("GATT", "notify FFF1: ok=$ok")
+                ok
+            }
+        }
+        runNext()
     }
 
     private fun enqueue(op: () -> Boolean) {
