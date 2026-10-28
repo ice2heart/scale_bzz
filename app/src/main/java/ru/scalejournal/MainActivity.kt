@@ -215,7 +215,7 @@ class MainActivity : ComponentActivity() {
             onResult("Ошибка: введите GitHub-токен с правом Contents: Read and write")
             return
         }
-        val ts = SimpleDateFormat("yyyyMMdd-HHmmss", Locale.US).format(Date())
+        val ts = SimpleDateFormat("yyyyMMdd-HHmmss-SSS", Locale.US).format(Date())
         val version = try {
             packageManager.getPackageInfo(packageName, 0).versionName
         } catch (_: Exception) {
@@ -282,7 +282,8 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun isNewerVersion(remote: String, current: String): Boolean {
-        fun parts(v: String) = v.split('.').map { it.toIntOrNull() ?: 0 }
+        fun parts(v: String) = v.trim().removePrefix("v").split('.')
+            .map { it.takeWhile { c -> c.isDigit() }.toIntOrNull() ?: 0 }
         val a = parts(remote)
         val b = parts(current)
         for (i in 0 until maxOf(a.size, b.size)) {
@@ -290,13 +291,14 @@ class MainActivity : ComponentActivity() {
             val y = b.getOrElse(i) { 0 }
             if (x != y) return x > y
         }
-        return false
+        // Равные числа: пре-релиз (1.4.3-rc1) старше обычного релиза (1.4.3)
+        return current.contains('-') && !remote.contains('-')
     }
 
     private fun downloadUpdate() {
         val info = updateInfo ?: return
         updateMessage.value = "Скачивание…"
-        UpdateChecker.download(effectiveToken(), info.apkUrl, File(cacheDir, "update.apk")) { result ->
+        UpdateChecker.download(effectiveToken(), info.apkUrl, info.sizeBytes, File(File(cacheDir, "updates"), "update.apk")) { result ->
             runOnUiThread {
                 result.fold(
                     onSuccess = { file ->

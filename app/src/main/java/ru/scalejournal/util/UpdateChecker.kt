@@ -59,7 +59,7 @@ object UpdateChecker {
         }.start()
     }
 
-    fun download(token: String, url: String, target: File, onResult: (Result<File>) -> Unit) {
+    fun download(token: String, url: String, expectedSize: Long, target: File, onResult: (Result<File>) -> Unit) {
         Thread {
             var connection: HttpURLConnection? = null
             try {
@@ -77,6 +77,9 @@ object UpdateChecker {
                 }
                 connection.inputStream.use { input ->
                     target.outputStream().use { output -> input.copyTo(output, 1 shl 16) }
+                }
+                if (expectedSize > 0 && target.length() != expectedSize) {
+                    throw IOException("Размер файла не совпадает: ${target.length()} вместо $expectedSize байт")
                 }
                 onResult(Result.success(target))
             } catch (e: Exception) {

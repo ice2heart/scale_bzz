@@ -3,9 +3,10 @@ package ru.scalejournal.util
 object Bmi {
 
     fun value(weightKg: Double, heightCm: Int): Double? {
-        if (weightKg <= 0 || heightCm !in 50..250) return null
+        if (!weightKg.isFinite() || weightKg <= 0 || heightCm !in 50..250) return null
         val meters = heightCm / 100.0
-        return weightKg / (meters * meters)
+        val bmi = weightKg / (meters * meters)
+        return if (bmi.isFinite()) bmi else null
     }
 
     fun category(bmi: Double): String = when {

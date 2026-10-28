@@ -26,5 +26,15 @@ class BmiTest {
         assertNull(Bmi.value(0.0, 180))
         assertNull(Bmi.value(80.0, 30))
         assertNull(Bmi.value(-5.0, 180))
+        assertNull(Bmi.value(Double.NaN, 180))
+        assertNull(Bmi.value(Double.POSITIVE_INFINITY, 180))
+    }
+
+    @Test
+    fun heightBoundaries() {
+        assertNull(Bmi.value(80.0, 49))
+        assertNull(Bmi.value(80.0, 251))
+        assertEquals(true, Bmi.value(80.0, 50) != null)
+        assertEquals(true, Bmi.value(80.0, 250) != null)
     }
 }
