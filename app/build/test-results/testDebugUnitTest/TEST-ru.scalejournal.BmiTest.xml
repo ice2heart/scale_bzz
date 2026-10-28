@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.scalejournal.BmiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-26T16:23:56" hostname="hive" time="0.002">
+  <properties/>
+  <testcase name="invalidInputsRejected" classname="ru.scalejournal.BmiTest" time="0.002"/>
+  <testcase name="bmiCalculation" classname="ru.scalejournal.BmiTest" time="0.0"/>
+  <testcase name="bmiCategories" classname="ru.scalejournal.BmiTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

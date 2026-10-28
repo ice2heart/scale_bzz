@@ -1,0 +1,1334 @@
+| Field | Value |
+|---|---|
+| Time | 2026-10-26 15:45:29.060 |
+| Timezone | Asia/Yekaterinburg (UTC 5h) |
+| Session ID | 1a177d0b564 |
+| App | openScale |
+| Version | 3.1.3-oss (77) |
+| Package | com.health.openscale.oss |
+| Build Type | oss |
+| Device | HONOR ANY-LX1 |
+| Android | 13 (API 33) |
+| Build ID | ANY-L21CQ 7.1.0.253(C185E63R2P3) |
+| Build Time | 2026-09-06T07:07:17Z |
+| Git SHA | 7ebb55be |
+
+```diff
++ 2026-10-26 15:45:29.055 I/DatabaseProvider: DatabaseProvider initialized with file logging = true
++ 2026-10-26 15:45:29.055 I/OpenScaleApp: LogManager initialized. File logging enabled: true
+? 2026-10-26 15:45:29.055 D/OpenScaleApp: Checking for first app start. isFirstAppStart: false
+? 2026-10-26 15:45:29.057 D/OpenScaleApp: Not the first app start. Default data should already exist.
+? 2026-10-26 15:45:29.060 D/openScaleLog: Initial markdown-diff headers written to: /storage/emulated/0/Android/data/com.health.openscale.oss/files/logs/openScale_current_log.txt
+? 2026-10-26 15:45:29.059 D/openScaleLog: Previous log file deleted on startup: openScale_current_log.txt
++ 2026-10-26 15:45:29.060 I/openScaleLog: LogManager initialized. Logging to file: enabled. Log directory: /storage/emulated/0/Android/data/com.health.openscale.oss/files/logs
+? 2026-10-26 15:45:29.060 D/openScaleLog: Initial markdown-diff headers written to: /storage/emulated/0/Android/data/com.health.openscale.oss/files/logs/openScale_current_log.txt
++ 2026-10-26 15:45:29.647 I/BluetoothFacade: User context updated -> Андрей
++ 2026-10-26 15:45:29.677 I/SharedViewModel: Derived backfill not needed for any user.
+
+```
+```diff
+? 2026-10-26 15:47:05.685 D/ScaleHandlerFactory: createCommunicator: Searching for communicator for 'Chipsea-BLE' (50:FB:ED:9E:DF:5C). Handler hint: 'OKOK VF0'
++ 2026-10-26 15:47:05.687 I/ScaleHandlerFactory: Developer mode active → routing 'Chipsea-BLE' to DebugGattHandler. No measurement will be stored.
++ 2026-10-26 15:47:19.235 I/UserSettingsRepository: Saving Bluetooth tune profile: Name=Aggressive
+? 2026-10-26 15:47:33.522 D/BluetoothActionButton: User clicked bluetooth icon connect → trying to connect to saved device Chipsea-BLE
++ 2026-10-26 15:47:33.526 I/BleConnector: Attempting to connect to Chipsea-BLE
+? 2026-10-26 15:47:33.527 D/BleConnector: Switching to new device: Releasing active communicator: null
+? 2026-10-26 15:47:33.527 D/BleConnector: Switching to new device: Active communicator released and set to null.
+? 2026-10-26 15:47:33.527 D/ScaleHandlerFactory: createCommunicator: Searching for communicator for 'Chipsea-BLE' (50:FB:ED:9E:DF:5C). Handler hint: 'OKOK VF0'
++ 2026-10-26 15:47:33.528 I/ScaleHandlerFactory: Developer mode active → routing 'Chipsea-BLE' to DebugGattHandler. No measurement will be stored.
++ 2026-10-26 15:47:33.530 I/BleConnector: ActiveCommunicator successfully created: GattScaleAdapter. Starting observation job...
+? 2026-10-26 15:47:33.531 D/BleConnector: Adapter isConnected: false for Chipsea-BLE (Status: CONNECTING)
++ 2026-10-26 15:47:33.531 I/BleConnector: Adapter no longer reports connected for Chipsea-BLE. Current status: CONNECTING. Expecting Disconnected Event.
++ 2026-10-26 15:47:47.698 I/GattScaleAdapter: Found 50:FB:ED:9E:DF:5C → stop scan + connect
+? 2026-10-26 15:47:49.379 D/GattScaleAdapter: Services discovered for 50:FB:ED:9E:DF:5C
+? 2026-10-26 15:47:49.380 D/DebugGattHandler: attach()
+? 2026-10-26 15:47:49.381 D/DebugGattHandler: handleConnected(userId=1, height=180.0, age=36)
+? 2026-10-26 15:47:49.382 D/DebugGattHandler: Connected in Debug mode. Dumping full GATT services/characteristics…
+? 2026-10-26 15:47:49.383 D/DebugGattHandler: === GATT Service Dump BEGIN ===
+? 2026-10-26 15:47:49.384 D/DebugGattHandler: Service 0x1800
+? 2026-10-26 15:47:49.385 D/DebugGattHandler:   └─ Char 0x2a00 props=READ|WRITE
+? 2026-10-26 15:47:49.385 D/DebugGattHandler:   └─ Char 0x2a01 props=READ
+? 2026-10-26 15:47:49.386 D/DebugGattHandler:   └─ Char 0x2a04 props=READ
+? 2026-10-26 15:47:49.387 D/DebugGattHandler:   └─ Char 0x2a02 props=READ
+? 2026-10-26 15:47:49.388 D/DebugGattHandler: Service 0x180a
+? 2026-10-26 15:47:49.388 D/DebugGattHandler:   └─ Char 0x2a29 props=READ
+? 2026-10-26 15:47:49.389 D/DebugGattHandler:   └─ Char 0x2a24 props=READ
+? 2026-10-26 15:47:49.390 D/DebugGattHandler:   └─ Char 0x2a25 props=READ
+? 2026-10-26 15:47:49.390 D/DebugGattHandler:   └─ Char 0x2a26 props=READ
+? 2026-10-26 15:47:49.391 D/DebugGattHandler:   └─ Char 0x2a27 props=READ
+? 2026-10-26 15:47:49.392 D/DebugGattHandler: Service 0xfff0
+? 2026-10-26 15:47:49.393 D/DebugGattHandler:   └─ Char 0xfff1 props=NOTIFY
+? 2026-10-26 15:47:49.394 D/DebugGattHandler: Service 0x181b
+? 2026-10-26 15:47:49.395 D/DebugGattHandler:   └─ Char 0xfa9c props=INDICATE
+? 2026-10-26 15:47:49.395 D/DebugGattHandler: Service 0x180f
+? 2026-10-26 15:47:49.395 D/DebugGattHandler:   └─ Char 0x2a19 props=READ|NOTIFY
+? 2026-10-26 15:47:49.395 D/DebugGattHandler: Service 0x1805
+? 2026-10-26 15:47:49.395 D/DebugGattHandler:   └─ Char 0x2a08 props=READ|WRITE|NOTIFY
+? 2026-10-26 15:47:49.395 D/DebugGattHandler: Service 0xfaa0
+? 2026-10-26 15:47:49.395 D/DebugGattHandler:   └─ Char 0xfaa1 props=WRITE
+? 2026-10-26 15:47:49.393 D/DebugGattHandler:   └─ Char 0xfff2 props=WRITE
+? 2026-10-26 15:47:49.395 D/DebugGattHandler:   └─ Char 0xfaa2 props=READ|NOTIFY
+? 2026-10-26 15:47:49.394 D/DebugGattHandler:   └─ Char 0x2a9c props=READ|INDICATE
+? 2026-10-26 15:47:49.396 D/DebugGattHandler: === GATT Service Dump END ===
+? 2026-10-26 15:47:49.397 D/DebugGattHandler: → read svc=0x1800 chr=0x2a00 (best effort)
+? 2026-10-26 15:47:49.398 D/DebugGattHandler: → read svc=0x180a chr=0x2a29 (best effort)
+? 2026-10-26 15:47:49.399 D/DebugGattHandler: → setNotifyOn svc=0x181b chr=0x2a9c
+? 2026-10-26 15:47:49.398 D/DebugGattHandler: → setNotifyOn svc=0x181d chr=0x2a9d
+? 2026-10-26 15:47:49.398 D/GattScaleAdapter: → read from chr=00002a00-0000-1000-8000-00805f9b34fb svc=00001800-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:47:49.398 D/DebugGattHandler: → read svc=0x180a chr=0x2a28 (best effort)
+? 2026-10-26 15:47:49.398 D/DebugGattHandler: → read svc=0x180a chr=0x2a26 (best effort)
+? 2026-10-26 15:47:49.400 D/DebugGattHandler: Debug handler armed. Incoming NOTIFY frames will be logged; no data is stored.
+? 2026-10-26 15:47:49.401 D/BleConnector: Adapter isConnected: true for Chipsea-BLE (Status: CONNECTING)
+? 2026-10-26 15:47:49.398 D/DebugGattHandler: → read svc=0x180f chr=0x2a19 (best effort)
++ 2026-10-26 15:47:49.401 I/BleConnector: Successfully connected to Chipsea-BLE via adapter's isConnected flow.
+? 2026-10-26 15:47:49.398 D/DebugGattHandler: → read svc=0x180a chr=0x2a24 (best effort)
+? 2026-10-26 15:47:49.406 D/BleConnector: BluetoothEvent received: Connected(deviceName=Chipsea-BLE, deviceAddress=50:FB:ED:9E:DF:5C) for Chipsea-BLE
++ 2026-10-26 15:47:49.407 I/BleConnector: Event: Connected to Chipsea-BLE (50:FB:ED:9E:DF:5C)
+! 2026-10-26 15:47:49.900 W/GattScaleAdapter: Timeout waiting for read on 00002a00-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:47:49.918 D/GattScaleAdapter: → read from chr=00002a29-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:47:50.029 D/GattScaleAdapter: ← received data chr=00002a00-0000-1000-8000-00805f9b34fb len=11 status=SUCCESS payload=[43 68 69 70 73 65 61 2D 42 4C 45]
+? 2026-10-26 15:47:50.030 D/DebugGattHandler: NOTIFY chr=0x2a00  payload=[43 68 69 70 73 65 61 2D 42 4C 45]  ascii=Chipsea-BLE
+? 2026-10-26 15:47:50.043 D/GattScaleAdapter: ← received data chr=00002a29-0000-1000-8000-00805f9b34fb len=7 status=SUCCESS payload=[43 68 69 70 73 65 61]
+? 2026-10-26 15:47:50.043 D/DebugGattHandler: NOTIFY chr=0x2a29  payload=[43 68 69 70 73 65 61]  ascii=Chipsea
+? 2026-10-26 15:47:50.059 D/GattScaleAdapter: → read from chr=00002a24-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:47:50.074 D/GattScaleAdapter: ← received data chr=00002a24-0000-1000-8000-00805f9b34fb len=8 status=SUCCESS payload=[43 53 54 33 34 4D 39 37]
+? 2026-10-26 15:47:50.074 D/DebugGattHandler: NOTIFY chr=0x2a24  payload=[43 53 54 33 34 4D 39 37]  ascii=CST34M97
+? 2026-10-26 15:47:50.092 D/GattScaleAdapter: → read from chr=00002a26-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:47:50.120 D/GattScaleAdapter: ← received data chr=00002a26-0000-1000-8000-00805f9b34fb len=3 status=SUCCESS payload=[31 2E 30]
+? 2026-10-26 15:47:50.121 D/DebugGattHandler: NOTIFY chr=0x2a26  payload=[31 2E 30]  ascii=1.0
+? 2026-10-26 15:47:50.141 D/GattScaleAdapter: → read from chr=00002a19-0000-1000-8000-00805f9b34fb svc=0000180f-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:47:50.165 D/GattScaleAdapter: ← received data chr=00002a19-0000-1000-8000-00805f9b34fb len=1 status=SUCCESS payload=[00]
+? 2026-10-26 15:47:50.167 D/DebugGattHandler: NOTIFY chr=0x2a19  payload=[00]  ascii=?
+? 2026-10-26 15:47:50.187 D/GattScaleAdapter: → set notify on chr=00002a9d-0000-1000-8000-00805f9b34fb svc=0000181d-0000-1000-8000-00805f9b34fb
+! 2026-10-26 15:47:50.190 W/GattScaleAdapter: Failed to initiate notify for 00002a9d-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:47:50.275 D/GattScaleAdapter: → set notify on chr=00002a9c-0000-1000-8000-00805f9b34fb svc=0000181b-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:47:50.312 D/GattScaleAdapter: ← notify state chr=00002a9c-0000-1000-8000-00805f9b34fb status=SUCCESS
+? 2026-10-26 15:47:53.117 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:53.119 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:53.238 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:53.239 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:53.516 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:53.518 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:53.786 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:53.788 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:54.262 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:54.264 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:54.387 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:54.389 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:54.628 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:54.631 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:54.865 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:54.868 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:55.109 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:55.111 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:55.465 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:55.467 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
+? 2026-10-26 15:47:55.709 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]
+? 2026-10-26 15:47:55.712 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 84 08 00 00 14 00 00 00 00]  ascii=??å??0??????????????
++ 2026-10-26 15:48:18.687 I/BleConnector: disconnect() called for Chipsea-BLE. Active communicator: true, Status: CONNECTED
+? 2026-10-26 15:48:18.688 D/BleConnector: Adapter isConnected: false for Chipsea-BLE (Status: DISCONNECTING)
++ 2026-10-26 15:48:18.689 I/BleConnector: Adapter no longer reports connected for Chipsea-BLE. Current status: DISCONNECTING. Expecting Disconnected Event.
++ 2026-10-26 15:48:18.773 I/GattScaleAdapter: Disconnected 50:FB:ED:9E:DF:5C: SUCCESS
+? 2026-10-26 15:48:18.774 D/DebugGattHandler: handleDisconnected()
+? 2026-10-26 15:48:18.775 D/DebugGattHandler: detach()
+? 2026-10-26 15:48:18.777 D/BleConnector: BluetoothEvent received: Disconnected(deviceAddress=50:FB:ED:9E:DF:5C, reason=SUCCESS) for Chipsea-BLE
++ 2026-10-26 15:48:18.778 I/BleConnector: Event: Disconnected from 50:FB:ED:9E:DF:5C. Reason: SUCCESS
+? 2026-10-26 15:48:18.778 D/BleConnector: Disconnected event: Releasing active communicator: GattScaleAdapter
+? 2026-10-26 15:48:18.780 D/BleConnector: Disconnected event: Active communicator released and set to null.
+? 2026-10-26 15:48:20.456 D/BluetoothActionButton: User clicked bluetooth icon connect → trying to connect to saved device Chipsea-BLE
++ 2026-10-26 15:48:20.464 I/BleConnector: Attempting to connect to Chipsea-BLE
+? 2026-10-26 15:48:20.464 D/BleConnector: Switching to new device: Releasing active communicator: null
+? 2026-10-26 15:48:20.464 D/BleConnector: Switching to new device: Active communicator released and set to null.
+? 2026-10-26 15:48:20.465 D/ScaleHandlerFactory: createCommunicator: Searching for communicator for 'Chipsea-BLE' (50:FB:ED:9E:DF:5C). Handler hint: 'OKOK VF0'
++ 2026-10-26 15:48:20.466 I/ScaleHandlerFactory: Developer mode active → routing 'Chipsea-BLE' to DebugGattHandler. No measurement will be stored.
++ 2026-10-26 15:48:20.468 I/BleConnector: ActiveCommunicator successfully created: GattScaleAdapter. Starting observation job...
++ 2026-10-26 15:48:20.469 I/BleConnector: Adapter no longer reports connected for Chipsea-BLE. Current status: CONNECTING. Expecting Disconnected Event.
+? 2026-10-26 15:48:20.469 D/BleConnector: Adapter isConnected: false for Chipsea-BLE (Status: CONNECTING)
++ 2026-10-26 15:48:20.616 I/GattScaleAdapter: Found 50:FB:ED:9E:DF:5C → stop scan + connect
+? 2026-10-26 15:48:22.202 D/GattScaleAdapter: Services discovered for 50:FB:ED:9E:DF:5C
+? 2026-10-26 15:48:22.204 D/DebugGattHandler: attach()
+? 2026-10-26 15:48:22.205 D/DebugGattHandler: handleConnected(userId=1, height=180.0, age=36)
+? 2026-10-26 15:48:22.206 D/DebugGattHandler: Connected in Debug mode. Dumping full GATT services/characteristics…
+? 2026-10-26 15:48:22.207 D/DebugGattHandler: === GATT Service Dump BEGIN ===
+? 2026-10-26 15:48:22.209 D/DebugGattHandler: Service 0x1800
+? 2026-10-26 15:48:22.210 D/DebugGattHandler:   └─ Char 0x2a00 props=READ|WRITE
+? 2026-10-26 15:48:22.211 D/DebugGattHandler:   └─ Char 0x2a01 props=READ
+? 2026-10-26 15:48:22.212 D/DebugGattHandler:   └─ Char 0x2a04 props=READ
+? 2026-10-26 15:48:22.212 D/DebugGattHandler:   └─ Char 0x2a02 props=READ
+? 2026-10-26 15:48:22.214 D/DebugGattHandler: Service 0x180a
+? 2026-10-26 15:48:22.215 D/DebugGattHandler:   └─ Char 0x2a29 props=READ
+? 2026-10-26 15:48:22.216 D/DebugGattHandler:   └─ Char 0x2a24 props=READ
+? 2026-10-26 15:48:22.217 D/DebugGattHandler:   └─ Char 0x2a25 props=READ
+? 2026-10-26 15:48:22.217 D/DebugGattHandler:   └─ Char 0x2a26 props=READ
+? 2026-10-26 15:48:22.218 D/DebugGattHandler:   └─ Char 0x2a27 props=READ
+? 2026-10-26 15:48:22.219 D/DebugGattHandler: Service 0xfff0
+? 2026-10-26 15:48:22.220 D/DebugGattHandler:   └─ Char 0xfff1 props=NOTIFY
+? 2026-10-26 15:48:22.221 D/DebugGattHandler:   └─ Char 0xfff2 props=WRITE
+? 2026-10-26 15:48:22.221 D/DebugGattHandler: Service 0x181b
+? 2026-10-26 15:48:22.222 D/DebugGattHandler:   └─ Char 0x2a9c props=READ|INDICATE
+? 2026-10-26 15:48:22.223 D/DebugGattHandler: Service 0x180f
+? 2026-10-26 15:48:22.223 D/DebugGattHandler:   └─ Char 0xfa9c props=INDICATE
+? 2026-10-26 15:48:22.224 D/DebugGattHandler:   └─ Char 0x2a19 props=READ|NOTIFY
+? 2026-10-26 15:48:22.225 D/DebugGattHandler: Service 0x1805
+? 2026-10-26 15:48:22.226 D/DebugGattHandler:   └─ Char 0x2a08 props=READ|WRITE|NOTIFY
+? 2026-10-26 15:48:22.226 D/DebugGattHandler: Service 0xfaa0
+? 2026-10-26 15:48:22.227 D/DebugGattHandler:   └─ Char 0xfaa1 props=WRITE
+? 2026-10-26 15:48:22.228 D/DebugGattHandler:   └─ Char 0xfaa2 props=READ|NOTIFY
+? 2026-10-26 15:48:22.229 D/DebugGattHandler: === GATT Service Dump END ===
+? 2026-10-26 15:48:22.229 D/DebugGattHandler: → read svc=0x1800 chr=0x2a00 (best effort)
+? 2026-10-26 15:48:22.230 D/DebugGattHandler: → read svc=0x180a chr=0x2a29 (best effort)
+? 2026-10-26 15:48:22.230 D/GattScaleAdapter: → read from chr=00002a00-0000-1000-8000-00805f9b34fb svc=00001800-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:22.232 D/DebugGattHandler: → read svc=0x180a chr=0x2a26 (best effort)
+? 2026-10-26 15:48:22.233 D/DebugGattHandler: → read svc=0x180a chr=0x2a28 (best effort)
+? 2026-10-26 15:48:22.233 D/DebugGattHandler: → read svc=0x180f chr=0x2a19 (best effort)
+? 2026-10-26 15:48:22.233 D/DebugGattHandler: → setNotifyOn svc=0x181d chr=0x2a9d
+? 2026-10-26 15:48:22.234 D/DebugGattHandler: → setNotifyOn svc=0x181b chr=0x2a9c
+? 2026-10-26 15:48:22.234 D/DebugGattHandler: Debug handler armed. Incoming NOTIFY frames will be logged; no data is stored.
+? 2026-10-26 15:48:22.231 D/DebugGattHandler: → read svc=0x180a chr=0x2a24 (best effort)
++ 2026-10-26 15:48:22.235 I/BleConnector: Successfully connected to Chipsea-BLE via adapter's isConnected flow.
+? 2026-10-26 15:48:22.234 D/BleConnector: Adapter isConnected: true for Chipsea-BLE (Status: CONNECTING)
+? 2026-10-26 15:48:22.238 D/BleConnector: BluetoothEvent received: Connected(deviceName=Chipsea-BLE, deviceAddress=50:FB:ED:9E:DF:5C) for Chipsea-BLE
++ 2026-10-26 15:48:22.239 I/BleConnector: Event: Connected to Chipsea-BLE (50:FB:ED:9E:DF:5C)
+! 2026-10-26 15:48:22.734 W/GattScaleAdapter: Timeout waiting for read on 00002a00-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:22.752 D/GattScaleAdapter: → read from chr=00002a29-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:22.803 D/GattScaleAdapter: ← received data chr=00002a00-0000-1000-8000-00805f9b34fb len=11 status=SUCCESS payload=[43 68 69 70 73 65 61 2D 42 4C 45]
+? 2026-10-26 15:48:22.803 D/DebugGattHandler: NOTIFY chr=0x2a00  payload=[43 68 69 70 73 65 61 2D 42 4C 45]  ascii=Chipsea-BLE
+? 2026-10-26 15:48:22.818 D/GattScaleAdapter: ← received data chr=00002a29-0000-1000-8000-00805f9b34fb len=7 status=SUCCESS payload=[43 68 69 70 73 65 61]
+? 2026-10-26 15:48:22.818 D/DebugGattHandler: NOTIFY chr=0x2a29  payload=[43 68 69 70 73 65 61]  ascii=Chipsea
+? 2026-10-26 15:48:22.835 D/GattScaleAdapter: → read from chr=00002a24-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:22.849 D/GattScaleAdapter: ← received data chr=00002a24-0000-1000-8000-00805f9b34fb len=8 status=SUCCESS payload=[43 53 54 33 34 4D 39 37]
+? 2026-10-26 15:48:22.849 D/DebugGattHandler: NOTIFY chr=0x2a24  payload=[43 53 54 33 34 4D 39 37]  ascii=CST34M97
+? 2026-10-26 15:48:22.867 D/GattScaleAdapter: → read from chr=00002a26-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:22.897 D/GattScaleAdapter: ← received data chr=00002a26-0000-1000-8000-00805f9b34fb len=3 status=SUCCESS payload=[31 2E 30]
+? 2026-10-26 15:48:22.899 D/DebugGattHandler: NOTIFY chr=0x2a26  payload=[31 2E 30]  ascii=1.0
+? 2026-10-26 15:48:22.921 D/GattScaleAdapter: → read from chr=00002a19-0000-1000-8000-00805f9b34fb svc=0000180f-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:22.966 D/GattScaleAdapter: ← received data chr=00002a19-0000-1000-8000-00805f9b34fb len=1 status=SUCCESS payload=[00]
+? 2026-10-26 15:48:22.967 D/DebugGattHandler: NOTIFY chr=0x2a19  payload=[00]  ascii=?
+? 2026-10-26 15:48:22.983 D/GattScaleAdapter: → set notify on chr=00002a9d-0000-1000-8000-00805f9b34fb svc=0000181d-0000-1000-8000-00805f9b34fb
+! 2026-10-26 15:48:22.983 W/GattScaleAdapter: Failed to initiate notify for 00002a9d-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:23.064 D/GattScaleAdapter: → set notify on chr=00002a9c-0000-1000-8000-00805f9b34fb svc=0000181b-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:23.100 D/GattScaleAdapter: ← notify state chr=00002a9c-0000-1000-8000-00805f9b34fb status=SUCCESS
+? 2026-10-26 15:48:23.123 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:23.123 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:23.394 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:23.397 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:23.637 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:23.639 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:23.899 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:23.900 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:24.169 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:24.170 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:24.445 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:24.447 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:24.683 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:24.685 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:24.956 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:24.958 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:25.225 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:25.227 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:25.541 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:25.544 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:25.767 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:25.770 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:26.035 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:26.038 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:26.303 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:26.304 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:26.662 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:26.664 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
++ 2026-10-26 15:48:31.231 I/MeasurementTransformation: Carry-over: inherited 1 value(s) from measurement 3.
++ 2026-10-26 15:48:31.255 I/MeasurementTransformation: Carry-over: inherited 1 value(s) from measurement 3.
+? 2026-10-26 15:48:34.712 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:34.713 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:34.946 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:34.946 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:35.181 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:35.182 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:35.427 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:35.430 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:35.666 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:35.667 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:36.031 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:36.031 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:36.266 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:36.266 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:36.517 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:36.518 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:36.739 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:36.739 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:36.985 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:36.984 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:37.339 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:37.340 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:37.588 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:37.589 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:37.837 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:37.838 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:38.070 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:38.072 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:38.302 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:38.304 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:38.663 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:38.666 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:38.911 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:38.912 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:39.147 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:39.150 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:39.380 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:39.381 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:39.629 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:39.631 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:39.866 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:39.869 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:40.107 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:40.110 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:40.468 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:40.470 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:40.706 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:40.708 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:40.947 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:40.950 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:41.189 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:41.192 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:41.429 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:41.431 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:41.785 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:41.788 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:42.023 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:42.025 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:42.270 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:42.272 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:42.626 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:42.629 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:42.863 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:42.865 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:43.106 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:43.107 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:43.474 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:43.475 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:43.590 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:43.591 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:43.939 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:43.940 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:44.189 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:44.191 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:44.428 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:44.430 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:44.667 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:44.669 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:45.026 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:45.029 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:45.262 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:45.264 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:45.626 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:45.628 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:45.749 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:45.751 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:48:46.104 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:48:46.105 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
++ 2026-10-26 15:48:46.239 I/GattScaleAdapter: Disconnected 50:FB:ED:9E:DF:5C: SUCCESS
+? 2026-10-26 15:48:46.240 D/DebugGattHandler: handleDisconnected()
+? 2026-10-26 15:48:46.240 D/DebugGattHandler: detach()
+? 2026-10-26 15:48:46.241 D/BleConnector: BluetoothEvent received: Disconnected(deviceAddress=50:FB:ED:9E:DF:5C, reason=SUCCESS) for Chipsea-BLE
++ 2026-10-26 15:48:46.241 I/BleConnector: Event: Disconnected from 50:FB:ED:9E:DF:5C. Reason: SUCCESS
+? 2026-10-26 15:48:46.241 D/BleConnector: Disconnected event: Releasing active communicator: GattScaleAdapter
+? 2026-10-26 15:48:46.243 D/BleConnector: Disconnected event: Active communicator released and set to null.
++ 2026-10-26 15:48:50.565 I/MeasurementTransformation: Carry-over: inherited 1 value(s) from measurement 3.
+? 2026-10-26 15:48:54.054 D/BluetoothActionButton: User clicked bluetooth icon connect → trying to connect to saved device Chipsea-BLE
++ 2026-10-26 15:48:54.061 I/BleConnector: Attempting to connect to Chipsea-BLE
+? 2026-10-26 15:48:54.062 D/BleConnector: Switching to new device: Releasing active communicator: null
+? 2026-10-26 15:48:54.062 D/BleConnector: Switching to new device: Active communicator released and set to null.
+? 2026-10-26 15:48:54.062 D/ScaleHandlerFactory: createCommunicator: Searching for communicator for 'Chipsea-BLE' (50:FB:ED:9E:DF:5C). Handler hint: 'OKOK VF0'
++ 2026-10-26 15:48:54.064 I/ScaleHandlerFactory: Developer mode active → routing 'Chipsea-BLE' to DebugGattHandler. No measurement will be stored.
++ 2026-10-26 15:48:54.068 I/BleConnector: ActiveCommunicator successfully created: GattScaleAdapter. Starting observation job...
+? 2026-10-26 15:48:54.069 D/BleConnector: Adapter isConnected: false for Chipsea-BLE (Status: CONNECTING)
++ 2026-10-26 15:48:54.069 I/BleConnector: Adapter no longer reports connected for Chipsea-BLE. Current status: CONNECTING. Expecting Disconnected Event.
++ 2026-10-26 15:48:58.009 I/GattScaleAdapter: Found 50:FB:ED:9E:DF:5C → stop scan + connect
+? 2026-10-26 15:48:59.698 D/GattScaleAdapter: Services discovered for 50:FB:ED:9E:DF:5C
+? 2026-10-26 15:48:59.700 D/DebugGattHandler: attach()
+? 2026-10-26 15:48:59.702 D/DebugGattHandler: handleConnected(userId=1, height=180.0, age=36)
+? 2026-10-26 15:48:59.703 D/DebugGattHandler: Connected in Debug mode. Dumping full GATT services/characteristics…
+? 2026-10-26 15:48:59.704 D/DebugGattHandler: === GATT Service Dump BEGIN ===
+? 2026-10-26 15:48:59.706 D/DebugGattHandler: Service 0x1800
+? 2026-10-26 15:48:59.708 D/DebugGattHandler:   └─ Char 0x2a00 props=READ|WRITE
+? 2026-10-26 15:48:59.709 D/DebugGattHandler:   └─ Char 0x2a01 props=READ
+? 2026-10-26 15:48:59.710 D/DebugGattHandler:   └─ Char 0x2a04 props=READ
+? 2026-10-26 15:48:59.711 D/DebugGattHandler:   └─ Char 0x2a02 props=READ
+? 2026-10-26 15:48:59.713 D/DebugGattHandler: Service 0x180a
+? 2026-10-26 15:48:59.714 D/DebugGattHandler:   └─ Char 0x2a29 props=READ
+? 2026-10-26 15:48:59.715 D/DebugGattHandler:   └─ Char 0x2a24 props=READ
+? 2026-10-26 15:48:59.716 D/DebugGattHandler:   └─ Char 0x2a25 props=READ
+? 2026-10-26 15:48:59.716 D/DebugGattHandler:   └─ Char 0x2a26 props=READ
+? 2026-10-26 15:48:59.717 D/DebugGattHandler:   └─ Char 0x2a27 props=READ
+? 2026-10-26 15:48:59.718 D/DebugGattHandler: Service 0xfff0
+? 2026-10-26 15:48:59.719 D/DebugGattHandler:   └─ Char 0xfff1 props=NOTIFY
+? 2026-10-26 15:48:59.719 D/DebugGattHandler:   └─ Char 0xfff2 props=WRITE
+? 2026-10-26 15:48:59.720 D/DebugGattHandler: Service 0x181b
+? 2026-10-26 15:48:59.721 D/DebugGattHandler:   └─ Char 0x2a9c props=READ|INDICATE
+? 2026-10-26 15:48:59.721 D/DebugGattHandler:   └─ Char 0xfa9c props=INDICATE
+? 2026-10-26 15:48:59.722 D/DebugGattHandler: Service 0x180f
+? 2026-10-26 15:48:59.723 D/DebugGattHandler:   └─ Char 0x2a19 props=READ|NOTIFY
+? 2026-10-26 15:48:59.724 D/DebugGattHandler: Service 0x1805
+? 2026-10-26 15:48:59.725 D/DebugGattHandler:   └─ Char 0x2a08 props=READ|WRITE|NOTIFY
+? 2026-10-26 15:48:59.726 D/DebugGattHandler: Service 0xfaa0
+? 2026-10-26 15:48:59.727 D/DebugGattHandler:   └─ Char 0xfaa1 props=WRITE
+? 2026-10-26 15:48:59.727 D/DebugGattHandler:   └─ Char 0xfaa2 props=READ|NOTIFY
+? 2026-10-26 15:48:59.728 D/DebugGattHandler: === GATT Service Dump END ===
+? 2026-10-26 15:48:59.729 D/DebugGattHandler: → read svc=0x1800 chr=0x2a00 (best effort)
+? 2026-10-26 15:48:59.730 D/DebugGattHandler: → read svc=0x180a chr=0x2a29 (best effort)
+? 2026-10-26 15:48:59.730 D/GattScaleAdapter: → read from chr=00002a00-0000-1000-8000-00805f9b34fb svc=00001800-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:48:59.731 D/DebugGattHandler: → read svc=0x180a chr=0x2a24 (best effort)
+? 2026-10-26 15:48:59.731 D/DebugGattHandler: → read svc=0x180a chr=0x2a26 (best effort)
+? 2026-10-26 15:48:59.731 D/DebugGattHandler: → read svc=0x180a chr=0x2a28 (best effort)
+? 2026-10-26 15:48:59.731 D/DebugGattHandler: → read svc=0x180f chr=0x2a19 (best effort)
+? 2026-10-26 15:48:59.732 D/DebugGattHandler: → setNotifyOn svc=0x181d chr=0x2a9d
+? 2026-10-26 15:48:59.732 D/DebugGattHandler: → setNotifyOn svc=0x181b chr=0x2a9c
+? 2026-10-26 15:48:59.732 D/DebugGattHandler: Debug handler armed. Incoming NOTIFY frames will be logged; no data is stored.
+? 2026-10-26 15:48:59.732 D/BleConnector: Adapter isConnected: true for Chipsea-BLE (Status: CONNECTING)
++ 2026-10-26 15:48:59.733 I/BleConnector: Successfully connected to Chipsea-BLE via adapter's isConnected flow.
+? 2026-10-26 15:48:59.737 D/BleConnector: BluetoothEvent received: Connected(deviceName=Chipsea-BLE, deviceAddress=50:FB:ED:9E:DF:5C) for Chipsea-BLE
++ 2026-10-26 15:48:59.737 I/BleConnector: Event: Connected to Chipsea-BLE (50:FB:ED:9E:DF:5C)
+! 2026-10-26 15:49:00.233 W/GattScaleAdapter: Timeout waiting for read on 00002a00-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:00.250 D/GattScaleAdapter: → read from chr=00002a29-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:00.275 D/GattScaleAdapter: ← received data chr=00002a00-0000-1000-8000-00805f9b34fb len=11 status=SUCCESS payload=[43 68 69 70 73 65 61 2D 42 4C 45]
+? 2026-10-26 15:49:00.276 D/DebugGattHandler: NOTIFY chr=0x2a00  payload=[43 68 69 70 73 65 61 2D 42 4C 45]  ascii=Chipsea-BLE
+? 2026-10-26 15:49:00.288 D/GattScaleAdapter: ← received data chr=00002a29-0000-1000-8000-00805f9b34fb len=7 status=SUCCESS payload=[43 68 69 70 73 65 61]
+? 2026-10-26 15:49:00.288 D/DebugGattHandler: NOTIFY chr=0x2a29  payload=[43 68 69 70 73 65 61]  ascii=Chipsea
+? 2026-10-26 15:49:00.305 D/GattScaleAdapter: → read from chr=00002a24-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:00.319 D/GattScaleAdapter: ← received data chr=00002a24-0000-1000-8000-00805f9b34fb len=8 status=SUCCESS payload=[43 53 54 33 34 4D 39 37]
+? 2026-10-26 15:49:00.320 D/DebugGattHandler: NOTIFY chr=0x2a24  payload=[43 53 54 33 34 4D 39 37]  ascii=CST34M97
+? 2026-10-26 15:49:00.336 D/GattScaleAdapter: → read from chr=00002a26-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:00.349 D/DebugGattHandler: NOTIFY chr=0x2a26  payload=[31 2E 30]  ascii=1.0
+? 2026-10-26 15:49:00.348 D/GattScaleAdapter: ← received data chr=00002a26-0000-1000-8000-00805f9b34fb len=3 status=SUCCESS payload=[31 2E 30]
+? 2026-10-26 15:49:00.368 D/GattScaleAdapter: → read from chr=00002a19-0000-1000-8000-00805f9b34fb svc=0000180f-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:00.399 D/GattScaleAdapter: ← received data chr=00002a19-0000-1000-8000-00805f9b34fb len=1 status=SUCCESS payload=[00]
+? 2026-10-26 15:49:00.401 D/DebugGattHandler: NOTIFY chr=0x2a19  payload=[00]  ascii=?
+? 2026-10-26 15:49:00.421 D/GattScaleAdapter: → set notify on chr=00002a9d-0000-1000-8000-00805f9b34fb svc=0000181d-0000-1000-8000-00805f9b34fb
+! 2026-10-26 15:49:00.423 W/GattScaleAdapter: Failed to initiate notify for 00002a9d-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:00.508 D/GattScaleAdapter: → set notify on chr=00002a9c-0000-1000-8000-00805f9b34fb svc=0000181b-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:00.548 D/GattScaleAdapter: ← notify state chr=00002a9c-0000-1000-8000-00805f9b34fb status=SUCCESS
++ 2026-10-26 15:49:01.420 I/BleConnector: disconnect() called for Chipsea-BLE. Active communicator: true, Status: CONNECTED
+? 2026-10-26 15:49:01.421 D/BleConnector: Adapter isConnected: false for Chipsea-BLE (Status: DISCONNECTING)
++ 2026-10-26 15:49:01.422 I/BleConnector: Adapter no longer reports connected for Chipsea-BLE. Current status: DISCONNECTING. Expecting Disconnected Event.
+? 2026-10-26 15:49:01.462 D/BleConnector: BluetoothEvent received: Disconnected(deviceAddress=50:FB:ED:9E:DF:5C, reason=SUCCESS) for Chipsea-BLE
+? 2026-10-26 15:49:01.462 D/DebugGattHandler: detach()
++ 2026-10-26 15:49:01.461 I/GattScaleAdapter: Disconnected 50:FB:ED:9E:DF:5C: SUCCESS
+? 2026-10-26 15:49:01.463 D/BleConnector: Disconnected event: Releasing active communicator: GattScaleAdapter
+? 2026-10-26 15:49:01.465 D/BleConnector: Disconnected event: Active communicator released and set to null.
+? 2026-10-26 15:49:01.461 D/DebugGattHandler: handleDisconnected()
++ 2026-10-26 15:49:01.462 I/BleConnector: Event: Disconnected from 50:FB:ED:9E:DF:5C. Reason: SUCCESS
+? 2026-10-26 15:49:02.973 D/BluetoothActionButton: User clicked bluetooth icon connect → trying to connect to saved device Chipsea-BLE
++ 2026-10-26 15:49:02.978 I/BleConnector: Attempting to connect to Chipsea-BLE
+? 2026-10-26 15:49:02.979 D/BleConnector: Switching to new device: Releasing active communicator: null
+? 2026-10-26 15:49:02.979 D/BleConnector: Switching to new device: Active communicator released and set to null.
+? 2026-10-26 15:49:02.980 D/ScaleHandlerFactory: createCommunicator: Searching for communicator for 'Chipsea-BLE' (50:FB:ED:9E:DF:5C). Handler hint: 'OKOK VF0'
++ 2026-10-26 15:49:02.982 I/ScaleHandlerFactory: Developer mode active → routing 'Chipsea-BLE' to DebugGattHandler. No measurement will be stored.
++ 2026-10-26 15:49:02.985 I/BleConnector: ActiveCommunicator successfully created: GattScaleAdapter. Starting observation job...
+? 2026-10-26 15:49:02.985 D/BleConnector: Adapter isConnected: false for Chipsea-BLE (Status: CONNECTING)
++ 2026-10-26 15:49:02.986 I/BleConnector: Adapter no longer reports connected for Chipsea-BLE. Current status: CONNECTING. Expecting Disconnected Event.
++ 2026-10-26 15:49:03.302 I/GattScaleAdapter: Found 50:FB:ED:9E:DF:5C → stop scan + connect
+? 2026-10-26 15:49:05.255 D/GattScaleAdapter: Services discovered for 50:FB:ED:9E:DF:5C
+? 2026-10-26 15:49:05.257 D/DebugGattHandler: attach()
+? 2026-10-26 15:49:05.259 D/DebugGattHandler: handleConnected(userId=1, height=180.0, age=36)
+? 2026-10-26 15:49:05.260 D/DebugGattHandler: Connected in Debug mode. Dumping full GATT services/characteristics…
+? 2026-10-26 15:49:05.261 D/DebugGattHandler: === GATT Service Dump BEGIN ===
+? 2026-10-26 15:49:05.262 D/DebugGattHandler: Service 0x1800
+? 2026-10-26 15:49:05.263 D/DebugGattHandler:   └─ Char 0x2a00 props=READ|WRITE
+? 2026-10-26 15:49:05.263 D/DebugGattHandler:   └─ Char 0x2a04 props=READ
+? 2026-10-26 15:49:05.264 D/DebugGattHandler: Service 0x180a
+? 2026-10-26 15:49:05.264 D/DebugGattHandler:   └─ Char 0x2a02 props=READ
+? 2026-10-26 15:49:05.264 D/DebugGattHandler:   └─ Char 0x2a29 props=READ
+? 2026-10-26 15:49:05.264 D/DebugGattHandler:   └─ Char 0x2a24 props=READ
+? 2026-10-26 15:49:05.264 D/DebugGattHandler:   └─ Char 0x2a25 props=READ
+? 2026-10-26 15:49:05.265 D/DebugGattHandler:   └─ Char 0x2a26 props=READ
+? 2026-10-26 15:49:05.265 D/DebugGattHandler:   └─ Char 0x2a27 props=READ
+? 2026-10-26 15:49:05.265 D/DebugGattHandler: Service 0xfff0
+? 2026-10-26 15:49:05.266 D/DebugGattHandler:   └─ Char 0xfff1 props=NOTIFY
+? 2026-10-26 15:49:05.263 D/DebugGattHandler:   └─ Char 0x2a01 props=READ
+? 2026-10-26 15:49:05.266 D/DebugGattHandler:   └─ Char 0xfff2 props=WRITE
+? 2026-10-26 15:49:05.266 D/DebugGattHandler: Service 0x181b
+? 2026-10-26 15:49:05.267 D/DebugGattHandler:   └─ Char 0x2a9c props=READ|INDICATE
+? 2026-10-26 15:49:05.267 D/DebugGattHandler:   └─ Char 0xfa9c props=INDICATE
+? 2026-10-26 15:49:05.267 D/DebugGattHandler: Service 0x180f
+? 2026-10-26 15:49:05.267 D/DebugGattHandler:   └─ Char 0x2a19 props=READ|NOTIFY
+? 2026-10-26 15:49:05.268 D/DebugGattHandler: Service 0x1805
+? 2026-10-26 15:49:05.268 D/DebugGattHandler:   └─ Char 0x2a08 props=READ|WRITE|NOTIFY
+? 2026-10-26 15:49:05.268 D/DebugGattHandler: Service 0xfaa0
+? 2026-10-26 15:49:05.268 D/DebugGattHandler:   └─ Char 0xfaa1 props=WRITE
+? 2026-10-26 15:49:05.268 D/DebugGattHandler:   └─ Char 0xfaa2 props=READ|NOTIFY
+? 2026-10-26 15:49:05.269 D/DebugGattHandler: === GATT Service Dump END ===
+? 2026-10-26 15:49:05.269 D/DebugGattHandler: → read svc=0x1800 chr=0x2a00 (best effort)
+? 2026-10-26 15:49:05.270 D/DebugGattHandler: → read svc=0x180a chr=0x2a24 (best effort)
+? 2026-10-26 15:49:05.270 D/DebugGattHandler: → read svc=0x180a chr=0x2a29 (best effort)
+? 2026-10-26 15:49:05.271 D/DebugGattHandler: → read svc=0x180a chr=0x2a28 (best effort)
+? 2026-10-26 15:49:05.271 D/DebugGattHandler: → read svc=0x180f chr=0x2a19 (best effort)
+? 2026-10-26 15:49:05.272 D/DebugGattHandler: Debug handler armed. Incoming NOTIFY frames will be logged; no data is stored.
+? 2026-10-26 15:49:05.271 D/DebugGattHandler: → setNotifyOn svc=0x181b chr=0x2a9c
+? 2026-10-26 15:49:05.270 D/GattScaleAdapter: → read from chr=00002a00-0000-1000-8000-00805f9b34fb svc=00001800-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:05.272 D/BleConnector: Adapter isConnected: true for Chipsea-BLE (Status: CONNECTING)
+? 2026-10-26 15:49:05.271 D/DebugGattHandler: → setNotifyOn svc=0x181d chr=0x2a9d
++ 2026-10-26 15:49:05.273 I/BleConnector: Successfully connected to Chipsea-BLE via adapter's isConnected flow.
+? 2026-10-26 15:49:05.270 D/DebugGattHandler: → read svc=0x180a chr=0x2a26 (best effort)
+? 2026-10-26 15:49:05.276 D/BleConnector: BluetoothEvent received: Connected(deviceName=Chipsea-BLE, deviceAddress=50:FB:ED:9E:DF:5C) for Chipsea-BLE
++ 2026-10-26 15:49:05.276 I/BleConnector: Event: Connected to Chipsea-BLE (50:FB:ED:9E:DF:5C)
+! 2026-10-26 15:49:05.775 W/GattScaleAdapter: Timeout waiting for read on 00002a00-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:05.792 D/GattScaleAdapter: → read from chr=00002a29-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:05.870 D/GattScaleAdapter: ← received data chr=00002a00-0000-1000-8000-00805f9b34fb len=11 status=SUCCESS payload=[43 68 69 70 73 65 61 2D 42 4C 45]
+? 2026-10-26 15:49:05.871 D/DebugGattHandler: NOTIFY chr=0x2a00  payload=[43 68 69 70 73 65 61 2D 42 4C 45]  ascii=Chipsea-BLE
+? 2026-10-26 15:49:05.887 D/GattScaleAdapter: ← received data chr=00002a29-0000-1000-8000-00805f9b34fb len=7 status=SUCCESS payload=[43 68 69 70 73 65 61]
+? 2026-10-26 15:49:05.888 D/DebugGattHandler: NOTIFY chr=0x2a29  payload=[43 68 69 70 73 65 61]  ascii=Chipsea
+? 2026-10-26 15:49:05.904 D/GattScaleAdapter: → read from chr=00002a24-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:05.954 D/GattScaleAdapter: ← received data chr=00002a24-0000-1000-8000-00805f9b34fb len=8 status=SUCCESS payload=[43 53 54 33 34 4D 39 37]
+? 2026-10-26 15:49:05.955 D/DebugGattHandler: NOTIFY chr=0x2a24  payload=[43 53 54 33 34 4D 39 37]  ascii=CST34M97
+? 2026-10-26 15:49:05.976 D/GattScaleAdapter: → read from chr=00002a26-0000-1000-8000-00805f9b34fb svc=0000180a-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:06.021 D/GattScaleAdapter: ← received data chr=00002a26-0000-1000-8000-00805f9b34fb len=3 status=SUCCESS payload=[31 2E 30]
+? 2026-10-26 15:49:06.022 D/DebugGattHandler: NOTIFY chr=0x2a26  payload=[31 2E 30]  ascii=1.0
+? 2026-10-26 15:49:06.038 D/GattScaleAdapter: → read from chr=00002a19-0000-1000-8000-00805f9b34fb svc=0000180f-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:06.088 D/GattScaleAdapter: ← received data chr=00002a19-0000-1000-8000-00805f9b34fb len=1 status=SUCCESS payload=[00]
+? 2026-10-26 15:49:06.089 D/DebugGattHandler: NOTIFY chr=0x2a19  payload=[00]  ascii=?
+? 2026-10-26 15:49:06.105 D/GattScaleAdapter: → set notify on chr=00002a9d-0000-1000-8000-00805f9b34fb svc=0000181d-0000-1000-8000-00805f9b34fb
+! 2026-10-26 15:49:06.106 W/GattScaleAdapter: Failed to initiate notify for 00002a9d-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:06.187 D/GattScaleAdapter: → set notify on chr=00002a9c-0000-1000-8000-00805f9b34fb svc=0000181b-0000-1000-8000-00805f9b34fb
+? 2026-10-26 15:49:06.221 D/GattScaleAdapter: ← notify state chr=00002a9c-0000-1000-8000-00805f9b34fb status=SUCCESS
+? 2026-10-26 15:49:06.289 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:06.290 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:06.562 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:06.563 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:06.791 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:06.794 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:07.054 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:07.055 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:07.325 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:07.326 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:07.610 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:07.613 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:07.883 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:07.884 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:08.110 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:08.110 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:08.416 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:08.416 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:08.658 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:08.659 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:08.913 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:08.914 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:09.162 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:09.165 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:09.632 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:09.633 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:09.865 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:09.867 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:09.984 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:09.985 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:10.230 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:10.232 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:10.588 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:10.591 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:10.828 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:10.830 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:11.086 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:11.087 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:11.301 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:11.302 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:11.667 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:11.668 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:11.904 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:11.905 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:12.146 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:12.149 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:12.387 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:12.388 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:12.742 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:12.743 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:12.987 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:12.990 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:13.228 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:13.231 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:13.465 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:13.466 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:13.706 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:13.707 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:13.947 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:13.949 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:14.302 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:14.303 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:14.548 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:14.550 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:14.787 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:14.790 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:15.025 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:15.026 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:15.386 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:15.386 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:15.625 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:15.626 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:15.865 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:15.866 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:16.106 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:16.109 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:16.463 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:16.465 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:16.706 D/GattScaleAdapter: ← received data chr=00002a9c-0000-1000-8000-00805f9b34fb len=20 status=SUCCESS payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]
+? 2026-10-26 15:49:16.707 D/DebugGattHandler: NOTIFY chr=0x2a9c  payload=[06 03 E5 07 01 30 00 00 00 88 13 DD 03 00 00 04 00 00 00 00]  ascii=??å??0?????Ý????????
+? 2026-10-26 15:49:16.908 D/BluetoothScreen: Launching Bluetooth scan directly via ScanButton
++ 2026-10-26 15:49:16.909 I/BluetoothScannerMgr: Starting device scan for 20000 ms.
++ 2026-10-26 15:49:17.017 I/GattScaleAdapter: Disconnected 50:FB:ED:9E:DF:5C: SUCCESS
+? 2026-10-26 15:49:17.017 D/DebugGattHandler: handleDisconnected()
+? 2026-10-26 15:49:17.018 D/DebugGattHandler: detach()
+? 2026-10-26 15:49:17.018 D/BleConnector: BluetoothEvent received: Disconnected(deviceAddress=50:FB:ED:9E:DF:5C, reason=SUCCESS) for Chipsea-BLE
++ 2026-10-26 15:49:17.018 I/BleConnector: Event: Disconnected from 50:FB:ED:9E:DF:5C. Reason: SUCCESS
+? 2026-10-26 15:49:17.018 D/BleConnector: Disconnected event: Releasing active communicator: GattScaleAdapter
+? 2026-10-26 15:49:17.020 D/BleConnector: Disconnected event: Active communicator released and set to null.
+? 2026-10-26 15:49:17.036 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.069 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.099 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.104 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.148 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.184 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.223 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.253 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.296 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.313 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.319 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.324 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.343 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.351 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.469 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.483 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.537 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.567 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.570 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.617 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.667 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.830 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.875 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:17.888 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.004 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.058 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.105 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.171 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.205 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.241 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.256 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.268 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.308 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.313 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.316 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.318 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.320 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.334 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.342 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.354 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.357 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.371 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.404 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.424 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.428 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.463 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.486 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.520 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.539 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.543 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.556 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.560 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.570 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.588 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.592 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.607 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.620 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.656 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.696 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.709 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.733 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.736 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.742 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.774 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.822 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.864 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.870 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.891 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.907 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.923 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.958 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:18.992 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.009 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.025 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.030 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.038 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.048 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.059 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.063 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.068 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.094 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.106 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.157 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.174 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.182 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.198 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.202 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.209 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.240 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.258 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.275 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.282 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.312 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.325 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.331 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.362 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.376 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.476 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.750 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.762 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.823 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.928 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:19.992 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.009 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.013 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.049 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.052 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.057 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.059 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.088 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.106 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.158 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.195 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.259 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.309 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.336 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.394 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.410 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.429 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.460 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.475 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.480 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.484 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.512 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.546 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.563 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.576 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.593 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.620 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.636 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.651 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.661 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.729 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.803 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.847 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.871 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.885 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.893 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.917 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.956 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:20.965 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.030 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.045 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.051 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.113 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.118 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.197 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.230 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.406 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.440 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.469 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.601 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.671 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.747 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.780 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.832 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.864 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.870 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.904 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.916 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.920 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.959 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.964 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.991 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:21.996 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.011 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.024 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.030 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.060 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.068 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.080 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.117 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.154 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.166 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.183 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.216 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.232 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.264 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.270 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.274 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.331 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.365 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.372 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.409 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.431 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.435 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.463 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.469 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.511 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.523 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.535 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.569 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.581 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.585 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.599 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.626 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.630 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.664 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.674 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.685 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.721 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.767 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.773 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.786 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.803 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.808 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.839 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.868 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.874 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.882 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.901 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.906 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.930 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.936 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.940 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:22.966 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.050 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.091 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.133 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.309 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.326 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.401 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.451 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.602 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.649 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.660 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.676 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.701 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.734 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.752 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.775 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.838 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.852 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.873 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.904 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.955 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.969 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:23.983 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.021 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.026 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.054 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.070 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.090 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.107 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.121 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.135 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.170 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.175 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.209 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.221 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.225 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.230 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.270 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.275 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.280 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.287 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.304 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.337 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.364 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.372 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.390 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.402 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.408 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.446 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.474 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.491 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.500 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.508 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.524 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.540 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.556 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.586 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.592 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.613 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.649 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.667 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.679 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.703 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.717 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.750 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.773 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.788 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.894 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:24.993 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.055 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.151 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.157 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.255 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.325 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.394 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.425 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.438 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.459 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.470 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.498 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.502 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.517 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.534 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.554 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.563 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.567 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.594 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.598 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.604 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.621 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.626 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.634 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.654 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.665 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.693 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.698 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.726 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.731 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.751 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.758 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.763 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.790 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.808 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.821 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.874 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.885 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.896 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.902 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.915 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.944 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.950 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.973 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.982 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.987 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:25.995 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.024 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.074 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.127 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.158 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.165 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.186 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.227 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.256 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.276 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.292 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.309 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.340 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.354 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.359 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.377 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.382 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.389 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.408 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.443 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.461 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.493 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.514 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.575 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.581 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:26.712 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.116 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.247 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.326 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.412 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.505 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.512 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.560 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.564 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.567 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.570 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.575 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.594 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.598 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.618 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.623 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.629 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.664 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.681 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.715 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.746 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.750 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.793 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.799 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.811 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.816 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.830 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.854 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.859 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.898 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.932 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.936 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.966 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.980 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:27.999 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.018 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.023 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.058 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.073 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.079 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.098 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.102 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.115 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.146 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.169 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.179 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.213 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.232 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.246 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.281 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.299 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.316 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.366 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.371 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.376 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.398 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.566 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.631 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.684 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.835 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:28.879 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.027 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.037 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.077 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.088 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.092 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.096 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.099 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.102 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.142 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.146 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.148 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.170 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.179 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.181 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.195 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.198 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.201 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.230 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.263 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.267 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.270 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.296 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.299 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.316 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.347 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.350 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.355 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.379 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.389 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.391 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.413 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.431 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.434 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.451 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.481 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.484 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.501 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.515 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.522 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.546 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.581 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.584 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.650 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.663 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.666 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.699 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.714 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.747 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.766 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.816 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.831 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.848 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.882 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.884 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.888 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.892 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.897 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.903 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.916 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.934 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.950 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:29.969 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.007 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.015 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.018 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.073 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.080 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.083 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.131 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.164 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.167 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.181 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.198 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.366 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.467 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.548 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.568 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.831 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.835 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.899 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.902 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.968 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:30.998 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.001 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.065 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.069 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.150 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.267 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.270 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.366 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.383 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.409 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.419 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.423 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.436 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.447 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.453 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.504 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.510 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.521 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.526 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.553 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.573 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.580 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.605 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.626 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.635 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.654 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.672 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.709 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.720 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.725 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.788 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.820 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.852 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.856 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.858 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.979 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.981 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.984 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.986 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.989 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:31.991 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.056 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.120 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.124 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.142 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.212 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.237 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.339 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.392 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.427 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.488 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.538 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.606 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.610 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.637 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.640 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.676 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.679 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.741 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.757 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.762 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.779 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.806 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.811 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.819 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.923 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.959 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.965 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.978 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.995 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:32.999 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.003 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.020 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.023 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.027 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.032 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.060 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.065 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.069 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.075 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.079 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.096 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.107 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.125 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.143 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.207 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.240 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.274 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.314 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.316 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.343 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.349 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.351 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
++ 2026-10-26 15:49:33.383 I/UserSettingsRepository: Saving device snapshot: addr=50:FB:ED:9E:DF:5C, name=Chipsea-BLE, uuids=0, hint=OKOK VF0
+? 2026-10-26 15:49:33.413 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.438 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.442 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.480 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.505 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.509 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.527 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.543 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.562 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.583 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.591 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.629 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.643 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.647 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.669 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.710 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.740 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.745 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.763 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.777 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.789 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.846 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.850 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.912 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:33.966 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.042 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.061 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.094 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.120 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.128 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.377 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.383 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.425 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.437 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.445 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.466 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.488 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.492 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.515 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.525 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.547 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.552 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.565 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.569 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.575 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.583 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.588 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.599 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.623 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.642 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.668 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.683 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.687 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.691 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.694 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.698 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.715 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.729 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.734 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.738 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.757 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.762 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.783 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.792 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.813 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.830 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.839 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.864 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.879 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.887 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.898 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.913 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.932 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.945 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.953 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:34.996 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.015 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.042 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.058 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.079 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.112 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.117 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.155 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.181 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.214 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.230 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.280 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.313 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.336 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.355 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.386 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.398 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.465 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.480 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.516 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.525 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.530 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.554 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.570 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.588 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.606 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.696 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.700 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.782 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.800 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.984 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:35.991 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.062 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.217 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.249 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.280 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.287 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.293 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.302 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.313 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.318 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.322 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.325 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.345 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.350 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.380 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.397 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.401 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.405 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.413 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.417 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.421 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.425 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.462 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.485 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.490 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.520 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.524 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.546 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.550 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.553 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.556 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.569 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.583 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.601 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.648 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.653 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.664 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.733 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.769 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.773 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.785 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.789 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.816 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.838 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.848 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.854 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.859 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.872 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.884 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.937 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
+? 2026-10-26 15:49:36.950 D/EtekcityFit8SHandler: No manufacturer data or manufacturer id is incorrect, ignoring device
++ 2026-10-26 15:49:36.951 I/BluetoothScannerMgr: Scan timeout reached after 20000 ms.
++ 2026-10-26 15:49:36.951 I/BluetoothScannerMgr: Stopping device scan. Triggered by timeout: true
+? 2026-10-26 15:49:36.971 D/BluetoothScannerMgr: Scan stopped. Found devices: 15
+
+```
